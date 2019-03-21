@@ -1,11 +1,16 @@
 App({
   onLaunch(options) {
-    // 第一次打开
-    // options.query == {number:1}
-    console.info('App onLaunch');
+    console.log('App Launch', options);
+    console.log('getSystemInfoSync', my.getSystemInfoSync());
+    console.log('SDKVersion', my.SDKVersion);
   },
-  onShow(options) {
-    // 从后台被 scheme 重新打开
-    // options.query == {number:1}
+  onShow() {
+    console.log('App Show');
+  },
+  onHide() {
+    console.log('App Hide');
+  },
+  globalData: {
+    hasLogin: false,
   },
 });
