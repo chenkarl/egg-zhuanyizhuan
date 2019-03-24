@@ -1,3 +1,12 @@
-<view>
-  this is a blank page
-</view>
+<form onSubmit="search" onReset="reset">
+  <view>
+    <label for="city-name" >待查询城市名：</label>
+    <input name="city" placeholder="input"/>
+  </view>
+
+  <view>
+    <label for="city-name" >待查询距离范围：</label>
+    <input name="distance" type="number" placeholder="input"/>
+  </view>
+  <button formType="submit">查询</button>
+</form>

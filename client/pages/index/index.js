@@ -32,4 +32,7 @@ Page({
       path: 'pages/index/index',
     };
   },
+  search(e){
+    console.log("123",e.detail.value);
+  }
 });
