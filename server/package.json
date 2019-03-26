@@ -8,7 +8,7 @@
     "egg-development-proxyagent": "^1.0.0",
     "egg-mongoose": "^3.1.0",
     "egg-mysql": "^3.0.0",
-    "egg-scripts": "^2.5.0"
+    "egg-scripts": "^2.11.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",
@@ -42,6 +42,6 @@
     "type": "git",
     "url": ""
   },
-  "author": "",
+  "author": "chenyuzhao.karl@gamil.com",
   "license": "MIT"
 }

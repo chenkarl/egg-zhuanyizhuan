@@ -12,7 +12,7 @@ class Amap {
   }
 
   async getWeatherInfo(place) {
-    const url = `${this.amapApiHost}${this.weatherInfoURL}key=${this.gaodeKey}&city=${place}`;
+    const url = `${this.amapApiHost}${this.weatherInfoURL}key=${this.gaodeKey}&city=${encodeURI(place)}`;
     this.app.logger.info(url);
     const res = await this.app.curl(url, {
       method: 'GET',
@@ -25,13 +25,18 @@ class Amap {
     }
     return data.lives;
   }
+
+  /**
+   * 获取地点信息
+   * @param {String} keywords 地点关键词
+   * @return {*} 行政区划
+   */
   async getDistrict(keywords) {
-    const url = `${this.amapApiHost}${this.districtURL}key=${this.gaodeKey}&keywords=${keywords}&subdistrict=1&extensions=base`;
+    const url = `${this.amapApiHost}${this.districtURL}key=${this.gaodeKey}&keywords=${encodeURI(keywords)}&subdistrict=2&extensions=base`;
     this.app.logger.info(url);
     const res = await this.app.curl(url, {
       method: 'GET',
       dataType: 'json',
-      gzip: true,
     });
     const data = res.data;
     if (data.status !== '1') {

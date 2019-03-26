@@ -15,6 +15,15 @@ module.exports = appInfo => {
     },
   };
 
+  config.cluster = {
+    listen: {
+      port: 7001,
+      hostname: 'localhost',
+    },
+  };
+
+  config.proxy = true;
+
   config.mysql = {
     client: {
       host: '127.0.0.1',

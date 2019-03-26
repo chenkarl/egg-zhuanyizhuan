@@ -9,3 +9,9 @@ exports.mongoose = {
   enable: false,
   package: 'egg-mongoose',
 };
+
+exports.proxyagent = {
+  enable: true,
+  package: 'egg-development-proxyagent',
+};
+
