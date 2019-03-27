@@ -4,6 +4,7 @@
   "description": "",
   "private": true,
   "dependencies": {
+    "csv": "^5.1.1",
     "egg": "^2.2.1",
     "egg-development-proxyagent": "^1.0.0",
     "egg-mongoose": "^3.1.0",

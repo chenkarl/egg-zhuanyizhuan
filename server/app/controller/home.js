@@ -10,9 +10,6 @@ class HomeController extends Controller {
   }
   async index() {
     this.ctx.body = 'hi, egg';
-    const place = this.ctx.query.place;
-    const info = await this.amap.getDistrict(place);
-    this.app.logger.info(info);
   }
 }
 
